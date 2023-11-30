@@ -20,8 +20,8 @@ private const val PRICE_PER_SEBLAK = 15000
 private const val PRICE_FOR_SAME_DAY_PICKUP = 3000
 
 
-// Mendeklarasikan kelas Orer View Model yang menyimpan banyak sebagai
-// Mendeklarasikan kelas Order View Model yang menyimpan banyak sebagai
+// [OrderViewModel] menyimpan informasi tentang pesanan seblak dalam hal kuantitas, variant, dan
+// tanggal pengambilan. Ia juga mengetahui cara menghitung harga total berdasarkan detail pesanan ini
 class OrderViewModel : ViewModel() {
 
     // Seblak state untuk pemesanan
@@ -75,7 +75,7 @@ class OrderViewModel : ViewModel() {
         return formattedPrice
     }
 
-    // Untuk mengembalikan daftar oshi tanggal ini
+    // Mengembalikan daftar opsi tanggal yang dimulai dengan tanggal sekarang dan 3 tanggal berikutnya
     private fun pickupOptions(): List<String> {
         val dateOptions = mutableListOf<String>()
         val formatter = SimpleDateFormat("E MMM d", Locale.getDefault())

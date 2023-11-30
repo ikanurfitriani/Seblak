@@ -26,7 +26,9 @@ import com.ikanurfitriani.seblak.R
 import com.ikanurfitriani.seblak.data.OrderUiState
 import com.ikanurfitriani.seblak.ui.components.FormattedPriceLabel
 
-// Anotasi yang menandakan bahwa fungsi OrderSummaryScreen adalah komponen Composable
+// Composable ini mengharapkan [orderUiState] yang mewakili status pesanan, [onCancelButtonClicked]
+// lambda yang memicu pembatalan pesanan dan meneruskan pesanan terakhir ke [onSendButtonClicked]
+// lambda
 @Composable
 fun OrderSummaryScreen(
     orderUiState: OrderUiState,

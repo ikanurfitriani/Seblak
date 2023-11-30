@@ -28,7 +28,9 @@ import androidx.compose.ui.unit.dp
 import com.ikanurfitriani.seblak.R
 import com.ikanurfitriani.seblak.data.DataSource
 
-// Anotasi yang menandakan bahwa fungsi StartOrderScreen adalah komponen Composable
+// Composable dapat disusun yang memungkinkan pengguna memilih jumlah cupcake yang diinginkan dan diharapkan
+// Lambda [onNextButtonClicked] yang mengharapkan kuantitas yang dipilih dan memicu navigasi ke sana
+// layar selanjutnya
 @Composable
 fun StartOrderScreen(
     quantityOptions: List<Pair<Int, Int>>,
@@ -92,10 +94,8 @@ fun StartOrderScreen(
     }
 }
 
-/**
- * Customizable button composable that displays the [labelResourceId]
- * and triggers [onClick] lambda when this composable is clicked
- */
+// Tombol yang dapat disesuaikan yang menampilkan [labelResourceId]
+// dan memicu lambda [onClick] saat composable ini diklik
 @Composable
 fun SelectQuantityButton(
     @StringRes labelResourceId: Int,
